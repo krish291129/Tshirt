@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ | NEXUS Threads</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/faq.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">NEXUS</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html" class="active">FAQ</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn">🤍<span class="favorite-count" style="display: none;">0</span></button>
+        <a href="login.html" class="btn btn-ghost">Login</a>
+        <button class="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="faq-hero">
+    <div class="fade-in-up">
+      <div class="section-label">Help Center</div>
+      <h1>FAQ</h1>
+      <p>Find answers to common questions</p>
+    </div>
+  </section>
+
+  <section class="faq-main">
+    <div class="faq-container">
+      <div class="faq-item">
+        <button class="faq-question"><span>What materials are used?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Our T-shirts are made from 100% premium cotton with innovative breathable tech weave for ultimate comfort.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question"><span>How do I choose the right size?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Check our size guide in the product catalog. We offer XS to XXL in regular slim fit.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question"><span>What is your return policy?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>We offer 30-day returns on unworn items with tags attached. Contact support@nexusthreads.com to initiate.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question"><span>How long does shipping take?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Standard shipping takes 5-7 business days. Express options available at checkout.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question"><span>Do you ship internationally?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Yes! We ship to 20+ countries worldwide. Shipping costs calculated at checkout.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question"><span>How do I care for my T-shirt?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Machine washable in cold water. Tumble dry low or hang dry. Iron on low heat if needed.</p></div>
+      </div>
+    </div>
+  </section>
+
+<footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>NEXUS Threads</h3>
+        <p>Redefining fashion for the digital age. Premium T-shirts designed for those who live in the future.</p>
+        <div class="social-icons">
+  <a href="#" class="social-icon" aria-label="Facebook">
+    <i class="fa-brands fa-facebook-f"></i>
+  </a>
+
+  <a href="#" class="social-icon" aria-label="Instagram">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+
+  <a href="#" class="social-icon" aria-label="Twitter">
+    <i class="fa-brands fa-x-twitter"></i>
+  </a>
+
+  <a href="#" class="social-icon" aria-label="LinkedIn">
+    <i class="fa-brands fa-linkedin-in"></i>
+  </a>
+</div>
+
+      </div>
+      
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <a href="products.html">Products</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="faq.html">FAQ</a>
+        <a href="terms.html">Terms & Conditions</a>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Contact Info</h3>
+        <p>📍 123 Future Street, Tech City, TC 12345</p>
+        <p>📧 hello@nexusthreads.com</p>
+        <p>📱 +1 (555) 123-4567</p>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Newsletter</h3>
+        <p>Stay updated with our latest drops and exclusive offers</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thanks for subscribing!');">
+          <input type="email" class="newsletter-input" placeholder="Your email" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2026 NEXUS Threads. All rights reserved. | Designed with 💙 for the future</p>
+    </div>
+  </footer>
+  <script src="js/animations.js"></script>
+  <script src="js/favorites.js"></script>
+  <script>
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const wasActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+        if (!wasActive) item.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

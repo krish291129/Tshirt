@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | NEXUS Threads</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+  <div class="auth-page">
+    <div class="auth-container fade-in-up">
+      <div class="auth-header">
+        <div class="logo" style="margin-bottom: 2rem;">NEXUS</div>
+        <h2>Create Account</h2>
+        <p>Join the future of fashion</p>
+      </div>
+      <form class="auth-form" id="signup-form">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" class="form-input" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" class="form-input" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" class="form-input" required>
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" class="form-input" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+      </form>
+      <div class="auth-divider">OR</div>
+      <div class="auth-footer">
+        <p>Already have an account? <a href="login.html">Login</a></p>
+        <p><a href="index.html">← Back to Home</a></p>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.getElementById('signup-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const pwd = document.getElementById('password').value;
+      const confirm = document.getElementById('confirm-password').value;
+      if (pwd !== confirm) {
+        alert('Passwords do not match!');
+        return;
+      }
+      alert('Account created successfully! (UI Demo)');
+      window.location.href = 'login.html';
+    });
+  </script>
+</body>
+</html>

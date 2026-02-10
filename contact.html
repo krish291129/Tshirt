@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | NEXUS Threads</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">NEXUS</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn">🤍<span class="favorite-count" style="display: none;">0</span></button>
+        <a href="login.html" class="btn btn-ghost">Login</a>
+        <button class="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="contact-hero">
+    <div class="fade-in-up">
+      <div class="section-label">Get In Touch</div>
+      <h1>CONTACT US</h1>
+      <p>We'd love to hear from you</p>
+    </div>
+  </section>
+
+  <section class="contact-main">
+    <div class="contact-container">
+      <div class="contact-info fade-in-left">
+        <h3>Contact Information</h3>
+        <div class="info-item">
+          <div class="info-icon">📍</div>
+          <div class="info-details">
+            <h4>Address</h4>
+            <p>123 Future Street<br>Tech City, TC 12345</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">📧</div>
+          <div class="info-details">
+            <h4>Email</h4>
+            <p>hello@nexusthreads.com<br>support@nexusthreads.com</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">📱</div>
+          <div class="info-details">
+            <h4>Phone</h4>
+            <p>+1 (555) 123-4567<br>Mon-Fri: 9AM-6PM EST</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-section fade-in-right">
+        <div class="success-message" id="success-message">
+          <h3>✅ Message Sent!</h3>
+          <p>Thank you for contacting us. We'll get back to you soon.</p>
+        </div>
+        <form id="contact-form" class="contact-form">
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" class="form-input" required>
+            <span class="error-message">Please enter your name</span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" class="form-input" required>
+            <span class="error-message">Please enter a valid email</span>
+          </div>
+          <div class="form-group">
+            <label for="mobile">Mobile Number</label>
+            <input type="tel" id="mobile" class="form-input">
+          </div>
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" class="form-textarea" required></textarea>
+            <span class="error-message">Please enter your message</span>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+ <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>NEXUS Threads</h3>
+        <p>Redefining fashion for the digital age. Premium T-shirts designed for those who live in the future.</p>
+        <div class="social-icons">
+  <a href="#" class="social-icon" aria-label="Facebook">
+    <i class="fa-brands fa-facebook-f"></i>
+  </a>
+
+  <a href="#" class="social-icon" aria-label="Instagram">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+
+  <a href="#" class="social-icon" aria-label="Twitter">
+    <i class="fa-brands fa-x-twitter"></i>
+  </a>
+
+  <a href="#" class="social-icon" aria-label="LinkedIn">
+    <i class="fa-brands fa-linkedin-in"></i>
+  </a>
+</div>
+
+      </div>
+      
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <a href="products.html">Products</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="faq.html">FAQ</a>
+        <a href="terms.html">Terms & Conditions</a>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Contact Info</h3>
+        <p>📍 123 Future Street, Tech City, TC 12345</p>
+        <p>📧 hello@nexusthreads.com</p>
+        <p>📱 +1 (555) 123-4567</p>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Newsletter</h3>
+        <p>Stay updated with our latest drops and exclusive offers</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thanks for subscribing!');">
+          <input type="email" class="newsletter-input" placeholder="Your email" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2026 NEXUS Threads. All rights reserved. | Designed with 💙 for the future</p>
+    </div>
+  </footer>
+
+  <script src="js/animations.js"></script>
+  <script src="js/favorites.js"></script>
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      let valid = true;
+      const name = document.getElementById('name');
+      const email = document.getElementById('email');
+      const message = document.getElementById('message');
+      
+      document.querySelectorAll('.form-group').forEach(g => g.classList.remove('error'));
+      
+      if (!name.value.trim()) { name.closest('.form-group').classList.add('error'); valid = false; }
+      if (!email.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) { email.closest('.form-group').classList.add('error'); valid = false; }
+      if (!message.value.trim()) { message.closest('.form-group').classList.add('error'); valid = false; }
+      
+      if (valid) {
+        document.getElementById('success-message').classList.add('show');
+        document.getElementById('contact-form').reset();
+        setTimeout(() => document.getElementById('success-message').classList.remove('show'), 5000);
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+
